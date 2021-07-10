@@ -1,4 +1,4 @@
-				# 					notes_list
+# notes_list
 ---
 # installation
 
