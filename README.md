@@ -25,4 +25,4 @@ or simply use any text editor of your choice
 
 
 ## Post Note
-files except setup.sh are not required they are just for working purpose 
+files except setup.sh are not required they are just for testing/working purpose 
