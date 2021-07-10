@@ -1,25 +1,25 @@
-# 					word_list
+				# 					notes_list
 ---
 # installation
 
 ``` bash
-	git clone 
-    cd notes_list
-    chmod +x setup.sh
-    ./setup.sh
+git clone https://github.com/narangyawali/notes_list.git
+cd notes_list
+chmod +x setup.sh
+./setup.sh
 ```
 ---
 # How To
  open your terminal and take notes or write down instantly
 
 ```bash
-	note "your notes should be in double quote if there are white space in between "
-    note forJustOneWord
+note "your notes should be in double quote if there are white space in between "
+note forJustOneWord
 ```
 
 your notes will be stored in ~/notes_dir/notes.txt
 to view your notes simply use
-	`cat ~/notes_dir/notes.txt`
+`cat ~/notes_dir/notes.txt`
 or simply use any text editor of your choice
 
 
