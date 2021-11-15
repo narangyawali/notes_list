@@ -2,12 +2,12 @@
 
 #creating directory and file
 
-if [ -d ~/notes_dir ] 
+if [ -d ~/.notes_dir ] 
 then 
 	echo "directory is present no need to creat";
 else
-	mkdir ~/notes_dir;
-	cd ~/notes_dir;
+	mkdir ~/.notes_dir;
+	cd ~/.notes_dir;
 	touch notes.txt ;
 fi
 	
@@ -40,7 +40,7 @@ function note(){
 	for (( i=0; i<\$length; i++ ))
 	do
 		echo \" \${args[\$i]} have been appended to the note list \" 
-		(echo \" \${args[\$i]}\" >> ~/notes_dir/notes.txt) 
+		(echo \" \${args[\$i]}\" >> ~/.notes_dir/notes.txt) 
 	done
 
 	}" >> ~/.bash_functions
