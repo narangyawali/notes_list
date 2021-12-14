@@ -12,7 +12,6 @@ chmod +x install.sh note
 
 below instruction are for old version which are applicable for new one as well 
  
-But new insturction are not listed here
 ---
 # How To
  open your terminal and take notes or write down instantly
@@ -30,4 +29,4 @@ or simply use any text editor of your choice
 
 
 ## Post Note
-files except setup.sh are not required they are just for testing/working purpose 
+New insturction are not listed here will be updated soon...
