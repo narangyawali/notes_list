@@ -11,3 +11,4 @@ else
 fi
 
 
+sudo cp ./note /usr/bin/
