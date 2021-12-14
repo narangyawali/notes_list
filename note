@@ -1,0 +1,58 @@
+#! /usr/bin/bash
+
+
+args=("$@")
+length=$#
+
+function checkflag(){
+	firstarg=${args[0]}
+    if [ ${firstarg:0:1} == "-" ]
+    then
+    	#echo "contains flag"         #attention required here
+        customnote
+    else
+    	default
+	fi
+}
+
+function customnote(){
+    firstarg=${args[0]}
+    file=${firstarg:1}".txt" 
+    if [ -f ~/.notes_list/$file ]
+    then 
+    	#echo "file found"
+        for (( i=1; i<$length; i++ ))
+    	do
+    		echo "${args[$i]}" >> ~/.notes_list/$file
+    	done
+    else
+    	touch ~/.notes_list/$file
+        #echo "file created"
+        customnote
+    fi
+}
+
+function default(){
+    for (( i=0; i<$length; i++ ))
+    do
+    	echo "${args[$i]}" >> ~/.notes_list/notes.txt
+    done
+}
+
+function install(){
+    if [ -d ~/.notes_list ]
+    then
+    	if [ -f ~/.notes_list/notes.txt ]
+        then
+        	echo "notes_list is already ready"
+        fi
+    else
+    	mkdir ~/.notes_list
+        touch ~/.notes_list/notes.txt
+        echo "notes_list has been set up"
+    fi
+}
+
+
+checkflag
+
