@@ -6,11 +6,16 @@ length=$#
 
 function checkflag(){
 	firstarg=${args[0]}
-    if [ ${firstarg:0:1} == "-" ]
+    if [ ${firstarg:0:2} == "--" ]
+    then
+    	ls ~/.notes_list
+        # echo "showing the files"
+    elif [ ${firstarg:0:1} == "-" ]
     then
     	#echo "contains flag"         #attention required here
         customnote
     else
+    	# echo ${firstarg:0:2}
     	default
 	fi
 }
