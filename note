@@ -6,7 +6,12 @@ length=$#
 
 function checkflag(){
 	firstarg=${args[0]}
-    if [ ${firstarg:0:2} == "--" ]
+    if [ ${firstarg:0:3} == "---" ]
+    then
+        # echo ${args[1]}
+    	cat ~/.notes_list/${args[1]}".txt"
+		
+    elif [ ${firstarg:0:2} == "--" ]
     then
     	ls ~/.notes_list
         # echo "showing the files"
